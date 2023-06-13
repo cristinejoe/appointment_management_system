@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minWidth="1050.0" prefHeight="450.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
+   <children>
+      <Label layoutX="480.0" layoutY="14.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="28.0" layoutY="56.0" prefHeight="59.0" prefWidth="600.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionAddCustomer" prefWidth="127.0" text="Add Customer" />
+            <Button mnemonicParsing="false" onAction="#onActionModifyCustomer" text="Modify Customer" />
+            <Button mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefWidth="127.0" text="Delete Customer" />
+         </children>
+      </HBox>
+      <TableView fx:id="customersTableView" layoutX="28.0" layoutY="115.0" prefHeight="200.0" prefWidth="1000.0">
+         <columns>
+            <TableColumn fx:id="CustomerIDCol" prefWidth="82.0" text="Customer ID" />
+            <TableColumn fx:id="customerNameCol" prefWidth="181.0" text="Customer Name" />
+            <TableColumn fx:id="addressCol" prefWidth="293.0" text="Address" />
+            <TableColumn fx:id="postalCodeCol" prefWidth="127.0" text="Postal Code" />
+            <TableColumn fx:id="phoneNumberCol" prefWidth="169.0" text="Phone Number" />
+            <TableColumn fx:id="divisionIDCol" prefWidth="147.0" text="Division ID" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" layoutX="834.0" layoutY="317.0" prefHeight="50.0" prefWidth="194.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionMainMenu" prefHeight="25.0" prefWidth="85.0" text="Main Menu" />
+            <Button mnemonicParsing="false" onAction="#onActionLogOut" prefHeight="25.0" prefWidth="85.0" text="Log Out" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
